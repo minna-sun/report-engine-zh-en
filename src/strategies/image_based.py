@@ -28,7 +28,7 @@ from template_engine import (
     insert_image_at_placeholder,
 )
 from models.result import ChapterResult
-from strategies.image_auto import _extract_width_from_name   # ← 新增
+from strategies.base import _extract_width_from_name   # ← 公共辅助函数已上移基类
 
 
 # ───────────────────────── 图片匹配辅助（私有） ─────────────────────────
