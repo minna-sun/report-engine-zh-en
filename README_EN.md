@@ -13,9 +13,11 @@ An automated test report generation tool for electronic component qualification 
 
 ## Requirements
 
-- Windows OS
-- Python 3.9+
-- Microsoft Word (COM automation via `pywin32`)
+- **OS**: Windows / macOS / Linux (cross-platform)
+- **Python**: 3.8+
+- **Office**: **No Microsoft Word required** — the core engine depends only on pure-Python libraries and has fully dropped the COM / `win32com` dependency.
+
+> Note: exporting a finished Word report to PDF is optional and needs local Microsoft Word + `win32com` (Windows-only); it does not affect core report generation or cross-platform deployment.
 
 ## Installation
 
@@ -31,20 +33,19 @@ Edit `src/configs/config.yaml` before first run:
 target_base:              # Root folder containing numbered report folders
 material_table:           # Directory containing 物料信息表.xlsx
 default_chapter_template: # Chapter name to use as template when adding new chapters
-pdf_output_dir:           # (Optional) Root directory for Word shortcut output
+pdf_output_dir:           # (Optional) Root directory for .lnk Word-report shortcuts
 log_root:                 # (Optional) Root directory for log files
 ```
 
 ## Usage
 
-Double-click `一键运行.bat`, or run from the command line:
+Run from the command line:
 
 ```bash
-cd src
-python main.py
+python src/main.py
 ```
 
-Results are saved to `output/` inside each numbered folder.
+On Windows you can also double-click `引擎工具.py` at the repository root to launch it in one click. Results are saved to `output/` inside each numbered folder.
 
 ## Project Structure
 
