@@ -88,7 +88,7 @@ def get_chapter_template_name(material_category: str, lang: str = "en") -> str:
       - 无任何行填「是」→ 返回空字符串（由调用方兜底）
 
     Args:
-        material_category: 物料类别（如 "1014"）。
+        material_category: 物料类别（如 "DEMO-001"）。
         lang: 报告语言（"en" / "zh"）。
 
     Returns:
@@ -201,7 +201,7 @@ def _load_material_config(material_category: str, lang: str = "en") -> List[Chap
     """加载物料类别配置，返回所有测试章节配置。
 
     Args:
-        material_category: 物料类别（如 ``"1014"``）。
+        material_category: 物料类别（如 ``"DEMO-001"``）。
         lang: 报告语言（``"en"`` / ``"zh"``），决定取哪列作为 ``test_item``：
             - ``"en"`` → 优先取"测试项目章节名（英文）"列，不存在则退回"测试项目"。
             - ``"zh"`` → 优先取"测试项目章节名（中文）"列，不存在则退回"测试项目"。
