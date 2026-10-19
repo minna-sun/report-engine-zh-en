@@ -1,0 +1,45 @@
+# ======================================================================
+# ReportPlatform 配置文件
+# 纪律：路径零硬编码 —— 各模块按约定自动发现路径（物料表、翻译表、
+#       设备字典、模板等），无需在配置中写死；本文件仅保留约定 4 字段。
+# 例外：模块 14 Compliance 策略需从 Z 盘拉取 RoHS 源报告，该路径随环境变化、
+#       无法自动发现，故增加 rohs_source_base 字段（专用于 compliance 策略）。
+#
+# 注意：以下路径均为示例占位符，请改成你本机的实际目录。
+# ======================================================================
+
+# 编号文件夹的根目录（其下每个子目录为一个待生成报告的编号文件夹）
+# 同时作为 folder_scanner 的 target_base（批量运行模式必填，且依赖物料原始记录审核状态1）。
+target_base: "D:/report-engine/2026/AP"
+
+# 物料信息表路径（可选；留空时自动在 .bat 同目录或 src/ 下查找 物料信息表.xlsx）。
+material_table: "D:/report-engine/2026/tools"
+
+# 新增章节的模板来源章节名称（spec 要求：缺失则视为配置错误中断启动，必填）。
+# 推荐使用结构完整的章节作为新章节模板。
+default_chapter_template: "Resistance to Soldering Heat"
+# 双语版本（report_engine 按报告语言自动选择；单语模板只需填对应一项）。
+default_chapter_template_en: "Resistance to Soldering Heat"
+default_chapter_template_zh: "耐焊接热测试"
+
+
+# word快捷方式 输出根目录（可选；留空则不输出）。
+# 脚本自动在此目录下按「物料类别/M月/D日」创建子目录存放报告快捷方式。
+pdf_output_dir: 'D:\report-engine\2026\tools\output'
+
+# 日志级别：DEBUG / INFO / WARNING / ERROR（可选，默认 INFO）。
+log_level: "INFO"
+
+# 日志根目录（可选；脚本自动在其下创建「{年份}/运行日志/{月份}/{日期}/report.log」）。
+# 留空则仅输出到控制台。
+log_root: 'D:\report-engine\2026\tools\output'
+
+# RoHS 源报告根路径（模块 14 Compliance 策略专用）：按料号在该路径下
+# 1月~12月 → 1号~31号 目录检索 RoHS 源报告（.docx）。不在代码中硬编码。
+rohs_source_base: "Z:/lab-reports/2026/RoHS"
+
+# 离子污染源报告根路径（可选；用于物料类别 1025 的离子污染章节）
+ion_contamination_source_base: 'Z:/lab-reports/2026/ion-contamination'
+
+# 卤素源报告根路径
+halogen_source_base: "Z:/lab-reports/2026/halogen"    # 卤素源报告搜索根路径（可选；留空则只查本地）
