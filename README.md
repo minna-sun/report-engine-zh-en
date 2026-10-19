@@ -7,8 +7,8 @@
 
 > **ReportPlatform · 中英双语测试报告自动生成引擎**
 > 可覆盖多种器件类型与多种测试项：**0 代码扩展**——新增类型/测试项只需添加数据配置，引擎自动识别；采用**驱动配置 + 策略复用**的可迁移架构，可复用于其他领域的中英双语报告秒级输出。
-> **ReportPlatform** covers a wide range of device types and test items with **zero-code extension** — adding new types/items only requires adding data configs, which the engine auto-detects; built on a **config-driven, strategy-reusable** portable architecture, it retargets to other domains for second-level (instant) bilingual (ZH/EN) report output.
-
+> 架构同构可迁移至：电子元器件 / 半导体 / 汽车零部件(PPAP) / 医疗器械注册检验 / 第三方检测(CNAS·CMA) / 新能源电池(UN38.3) / 食品·化妆品安全检测 / 化工·材料检测 / 建材工程质检 / 环境监测 等行业的测试·检测·合规报告生成。
+> **ReportPlatform** covers a wide range of device types and test items with **zero-code extension** — adding new types/items only requires adding data configs, which the engine auto-detects; built on a **config-driven, strategy-reusable** portable architecture, it retargets to other domains for second-level (instant) bilingual (ZH/EN) report output, and is reusable for test/inspection/compliance reporting across electronics, automotive, medical devices, third-party labs, new-energy batteries, food & cosmetics, chemicals, building materials, and environmental monitoring.
 ---
 
 ## 环境要求 / Requirements
