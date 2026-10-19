@@ -6,9 +6,16 @@
 ![Stars](https://img.shields.io/github/stars/minna-sun/report-engine-zh-en?style=social)
 
 > **ReportPlatform · 中英双语测试报告自动生成引擎**
-> 可覆盖 多种 器件类型与 多种 测试项：**0 代码扩展**——新增类型/测试项只需添加数据配置，引擎自动识别；采用**驱动配置 + 策略复用**的可迁移架构，可复用于其他领域的中英双语报告秒级输出。
+> 可覆盖多种器件类型与多种测试项：**0 代码扩展**——新增类型/测试项只需添加数据配置，引擎自动识别；采用**驱动配置 + 策略复用**的可迁移架构，可复用于其他领域的中英双语报告秒级输出。
 > **ReportPlatform** covers a wide range of device types and test items with **zero-code extension** — adding new types/items only requires adding data configs, which the engine auto-detects; built on a **config-driven, strategy-reusable** portable architecture, it retargets to other domains for second-level (instant) bilingual (ZH/EN) report output.
+
 ---
+
+## 环境要求 / Requirements
+Python 3.8+，跨平台支持 Windows / macOS / Linux。核心引擎仅依赖纯 Python 库（python-docx、openpyxl、lxml、Pillow、PyMuPDF、PyYAML），无需安装 Microsoft Office，无 win32com / COM 依赖。运行：`python src/main.py`（Windows 也可双击 `一键运行.bat`）。
+
+> Note: optional docx→PDF export (`export_pdf`) needs local Microsoft Word + win32com and is Windows-only; it does not affect core report generation or cross-platform deployment. Set the paths in `config.yaml` to your local directories.
+
 
 # 报告生成系统 使用说明
 
@@ -55,7 +62,7 @@ py -m pip install -r requirements.txt
 
 ## 第三步：运行
 
-双击 `一键运行.bat`，等待处理完成后查看控制台输出的汇总信息。
+运行 `python src/main.py`（Windows 也可双击 `一键运行.bat`），等待处理完成后查看控制台输出的汇总信息。
 
 生成的报告保存在各编号文件夹的 `output/` 子目录下。
 
