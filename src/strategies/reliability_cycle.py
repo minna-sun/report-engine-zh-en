@@ -11,7 +11,7 @@ PNG 图片形式插入到该章节 ``Result description`` 行的下一行。
   5. 在 finally 块中清理两个临时文件。
 
 适用章节：所有类型为 ``ReliabilityCycle`` 的测试章节（如 HTRB / HTGB /
-H3TRB / TC / HAST / UHAST / 双85 / 高温存储 等，见 1014.md）。
+H3TRB / TC / HAST / UHAST / 双85 / 高温存储 等，见 category-example.md）。
 
 边界（见 设计说明书 §6.4）：
   - 不导入 python-docx / lxml / DocumentEngine。
