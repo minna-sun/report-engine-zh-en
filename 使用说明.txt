@@ -1,0 +1,19 @@
+【运行前准备】
+
+1. 安装 Python 3.8 或更高版本
+   下载地址：https://www.python.org/downloads/
+   安装时务必勾选 "Add Python to PATH"
+
+2. 安装依赖
+   打开命令行（Win+R 输入 cmd 回车），粘贴以下命令：
+   pip install python-docx openpyxl Pillow lxml pyyaml PyMuPDF
+
+   如果下载慢，可用国内镜像：
+   pip install python-docx openpyxl Pillow lxml pyyaml PyMuPDF -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+【运行注意事项】
+如“引擎工具”拷贝出去，需修改其main脚本指向路径；
+
+【运行方式】
+
+双击 引擎工具.py（或拖拽文件夹到 引擎脚本.py 上）
