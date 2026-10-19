@@ -6,9 +6,8 @@
 ![Stars](https://img.shields.io/github/stars/minna-sun/report-engine-zh-en?style=social)
 
 > **ReportPlatform · 中英双语测试报告自动生成引擎**
-> 覆盖 30+ 器件类型与 30+ 测试项，一键将测试原始数据生成为中英双语 Word 报告；引擎采用可迁移架构，可复用于其他领域的报告输出。
-> **ReportPlatform** is a portable engine that turns raw test data into bilingual (ZH/EN) Word reports across 30+ device types and 30+ test items, and can be retargeted to reporting in other domains.
-
+> 可覆盖 多种 器件类型与 多种 测试项：**0 代码扩展**——新增类型/测试项只需添加数据配置，引擎自动识别；采用**驱动配置 + 策略复用**的可迁移架构，可复用于其他领域的中英双语报告秒级输出。
+> **ReportPlatform** covers a wide range of device types and test items with **zero-code extension** — adding new types/items only requires adding data configs, which the engine auto-detects; built on a **config-driven, strategy-reusable** portable architecture, it retargets to other domains for second-level (instant) bilingual (ZH/EN) report output.
 ---
 
 # 报告生成系统 使用说明
