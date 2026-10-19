@@ -97,7 +97,7 @@ class ChapterContext:
     Attributes:
         config: 静态策略配置（ChapterConfig）。
         runtime: 运行时数据（ChapterRuntime）。
-        material_category: 物料类别（如 ``"1014"``），用作路由键。
+        material_category: 物料类别（如 ``"DEMO-001"``），用作路由键。
         source_folder_name: 原始记录子文件夹真实名称（用于 Test Result 判定）。
     """
 
