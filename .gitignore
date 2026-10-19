@@ -1,0 +1,19 @@
+# ===== OS / editor =====
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# ===== Generated runtime output (demo) =====
+demo/runtime/
+
+# ===== Local secrets =====
+.env
