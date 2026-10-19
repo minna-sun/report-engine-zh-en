@@ -1,0 +1,21 @@
+# ReportPlatform 依赖清单（v5.0 分层技术栈）
+#
+# 分层说明：
+#   - A 层（数据/基础设施）与 B 层（文档引擎）：
+#       Excel 读取/回写用 openpyxl；Word 文档生成用 python-docx（跨平台，无 Office / COM 依赖）。
+#   - C 层（业务编排 / Word 文档操作）：
+#       report_engine / template_engine / processors / strategies / main
+#       全部经 DocumentEngine（python-docx 实现）操作 Word，无 win32com / COM 依赖。
+#   - 文档底层 OOXML 操作（services.docx_engine / services.ooxml_service）依赖 lxml。
+#   - 图像预处理（image_service）依赖 Pillow。
+#
+# v5.0 已彻底移除 win32com / pywin32：Word 生成走 python-docx + lxml（OOXML），Excel 走 openpyxl。
+# 报告快捷方式（.lnk）通过 PowerShell 创建，Python 代码不直接依赖 pywin32。
+openpyxl>=3.1.5
+python-docx>=1.0
+lxml>=5.0
+pyyaml>=6.0
+# image_service 依赖（裁剪空白、缩放、设置 DPI 元数据）
+Pillow>=10.0
+# pdf_extractor 依赖（提取 PDF 文本和图片，供 IonContaminationStrategy 使用）
+PyMuPDF>=1.23.0
