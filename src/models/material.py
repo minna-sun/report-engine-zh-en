@@ -21,7 +21,7 @@ class MaterialRecord:
 
     Attributes:
         number: 编号（直接读取）。
-        material_category: 物料类别（直接读取，如 ``"1014"``）；
+        material_category: 物料类别（直接读取，如 ``"DEMO-001"``）；
             作为 ``section_manager`` 路由键，决定加载哪张物料类别配置。
         material_code: 料号（从“变更描述”提取，10 位以上连续数字）。
         material_subclass: 物料子类（从“变更描述”提取中文关键词，如“二极管”）。
@@ -39,7 +39,7 @@ class MaterialRecord:
     """
 
     number: str                      # 编号（直接读取）
-    material_category: str           # 物料类别（直接读取，如 1014）
+    material_category: str           # 物料类别（直接读取，如 DEMO-001）
     material_code: str               # 料号（从"变更描述"中提取，10 位以上连续数字）
     material_subclass: str           # 物料子类（从"变更描述"中提取中文关键词，如"二极管"）
     material_model: str              # 物料型号（从"变更描述"中提取，如"JST131V-800DS"）
