@@ -17,6 +17,15 @@ Python 3.8+，跨平台支持 Windows / macOS / Linux。核心引擎仅依赖纯
 > Note: optional docx→PDF export (`export_pdf`) needs local Microsoft Word + win32com and is Windows-only; it does not affect core report generation or cross-platform deployment. Set the paths in `config.yaml` to your local directories.
 
 
+## 📂 文档导航 / Documentation
+
+*   [01. 顶层架构设计（为什么这么设计）](docs/01_Architecture.md)
+*   [02. 文档引擎抽象层 (DocumentEngine)](docs/02_DocumentEngine.md)
+*   [03. 人机协同开发纪律 (AI Development Rules)](docs/03_AI_Development_Rules.md)
+*   [深度施工规范（模块边界 / 接口 / 数据流）](skill/%E9%87%8D%E6%9E%84%E7%AC%AC%E5%9B%9B%E7%89%88%EF%BC%88%E6%8B%86%E8%A7%A3%EF%BC%89.md)
+
+---
+
 # 报告生成系统 使用说明
 
 ## 简介
