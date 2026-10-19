@@ -66,7 +66,7 @@ docs/数据库/               # Material category configs and lookup tables
 
 ## Adding a New Material Category
 
-1. Create `docs/数据库/物料类别配置/{category_code}.md` following the format in `1014.md`.
+1. Create `docs/数据库/物料类别配置/{category_code}.md` following the format in `category-example.md`.
 2. No code changes required.
 
 ## License
