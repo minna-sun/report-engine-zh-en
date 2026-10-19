@@ -17,3 +17,17 @@ demo/runtime/
 
 # ===== Local secrets =====
 .env
+
+# ===== Private production strategies (not published) =====
+# 以下生产策略为内部私有实现，保留在本地 src/strategies/，不随公开仓库发布。
+# 公开仓库仅含 base.py（基类）与 image_based.py（示例策略）。
+src/strategies/compliance.py
+src/strategies/eds.py
+src/strategies/electrical_image_auto.py
+src/strategies/electrical_table.py
+src/strategies/halogen.py
+src/strategies/image_and_electrical.py
+src/strategies/image_auto.py
+src/strategies/ion_contamination.py
+src/strategies/reliability_cycle.py
+src/strategies/backup/
