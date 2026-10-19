@@ -33,7 +33,7 @@ def _extract_from_folder_name(folder_name: str) -> dict:
 
     Args:
         folder_name: 只传文件夹名（不含路径），如
-            "R0365896+ 10140012711+（2632 依顿）+场效应管"
+            "R0001234+ 10000000001+（DEMO 示例供应商）+场效应管"
 
     Returns:
         {"material_code": str, "period": str, "ap": bool, "supplier": str}
@@ -110,9 +110,9 @@ def _extract_from_pdf_filename(pdf_filename: str, material_code: str,
     """从 PDF 文件名提取 AP 和供应商信息。
 
     文件名示例：
-      298-A2014F-P-V06(10250042319)-2621-AP.pdf
-      338-A20010W-PC-V01(10250042935)-2632-JEST.pdf
-      575-B18002C-C-V02(10250049056)-2630-亚恒.pdf
+      DEMO-A000000-P-V06(10000000001)-DEMO1-AP.pdf
+      DEMO-A000001-PC-V01(10000000002)-DEMO2-示例供应商.pdf
+      DEMO-B000002-C-V02(10000000003)-DEMO3-示例供应商.pdf
 
     提取方式：
       1. 去除扩展名
