@@ -1178,7 +1178,7 @@ def fill_sample_description(doc, task_ctx) -> None:
             warning(f"[fill_sample_description] 读取图片失败 {img_path}：{e}，跳过处理")
             return
         # 宽度：括号优先 → 7.0（局部导入，避免与 strategies 循环依赖）
-        from strategies.image_auto import _extract_width_from_name
+        from strategies.base import _extract_width_from_name
         _stem = os.path.splitext(os.path.basename(img_path))[0]
         _w = _extract_width_from_name(_stem, 7.0)
         ok = eng.insert_image(doc, ph_para, data, _w)
@@ -1227,7 +1227,7 @@ def fill_sample_description_images_only(doc, task_ctx) -> None:
             warning(f"[fill_sample_description_images_only] 读取图片失败 {img_path}：{e}，跳过")
             return
         # 宽度：括号优先 → 7.0（局部导入，避免与 strategies 循环依赖）
-        from strategies.image_auto import _extract_width_from_name
+        from strategies.base import _extract_width_from_name
         _stem = os.path.splitext(os.path.basename(img_path))[0]
         _w = _extract_width_from_name(_stem, 7.0)
         ok = eng.insert_image(doc, ph_para, data, _w)
