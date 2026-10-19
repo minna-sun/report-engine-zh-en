@@ -10,11 +10,30 @@
 """
 
 from abc import ABC, abstractmethod
+import re
 from typing import Any
 
 from models.chapter import ChapterContext
 from models.context import TaskContext
 from models.result import ChapterResult
+
+
+def _extract_width_from_name(name: str, default_cm: float) -> float:
+    """从文件名提取宽度：匹配最后一个括号内的数字/小数（半角/全角）。
+
+    例：'1-1(10)'    → 10.0
+        '1-1（10.5）' → 10.5
+        '1-1(1)(10)' → 10.0   (取最后一个)
+        '1-1'        → default_cm
+        '1-1(abc)'   → default_cm
+    """
+    matches = re.findall(r"[（(](\d+(?:\.\d+)?)[）)]", name)
+    if matches:
+        try:
+            return float(matches[-1])
+        except (ValueError, TypeError):
+            pass
+    return default_cm
 
 
 class BaseStrategy(ABC):
