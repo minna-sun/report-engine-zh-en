@@ -25,6 +25,7 @@ graph TD
 
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style E fill:#bbf,stroke:#333,stroke-width:2px
+```
 
 ### 2.1 五层职责边界（强制约束）
 
