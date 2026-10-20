@@ -18,14 +18,13 @@
 
 ```mermaid
 graph TD
-    A[① 接口层 main.py / CLI] -->|接收请求, 路由| B(② 业务编排层 report_engine)
-    B -->|调度| C(③ 业务处理层 processors / strategies)
-    C -->|产生业务指令 / 业务结果| D(④ 文档服务层 template_engine)
-    D -->|解析为具体文档操作| E(⑤ 文档技术实现层 docx_engine / ooxml)
+    A["① 接口层: main.py / CLI"] -->|接收请求, 路由| B["② 业务编排层: report_engine"]
+    B -->|调度| C["③ 业务处理层: processors / strategies"]
+    C -->|产生业务指令 / 业务结果| D["④ 文档服务层: template_engine"]
+    D -->|解析为具体文档操作| E["⑤ 文档技术实现层: docx_engine / ooxml"]
 
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style E fill:#bbf,stroke:#333,stroke-width:2px
-```
 
 ### 2.1 五层职责边界（强制约束）
 
