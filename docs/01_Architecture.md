@@ -15,6 +15,8 @@
 ## 2. 核心架构：五层分离
 
 系统强制划分为五层，严禁跨层调用。每一层只说清"自己该说什么"，把"不该管的"推给相邻层。
+
+```mermaid
 graph TD
     A[① 接口层: main.py 或 CLI] -->|接收请求, 路由| B(② 业务编排层: report_engine)
     B -->|调度| C(③ 业务处理层: processors 和 strategies)
