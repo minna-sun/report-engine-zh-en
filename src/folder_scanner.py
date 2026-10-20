@@ -7,7 +7,7 @@
 
 输入：
     - records    ：list[MaterialRecord]，由 config_loader 返回的已审批物料记录
-    - target_base：数据目录路径（如 D:/.../AP）
+    - target_base：数据目录路径（如 D:/.../xx）
     - recursive  ：是否穿透子目录（默认 True）
     - max_depth  ：递归最大下钻层数（仅 recursive=True 时生效，默认 4）
 
@@ -16,7 +16,7 @@
 边界：
     - recursive=False 时仅扫描 target_base 第一层子文件夹（spec 原行为）；
     - recursive=True 时递归收集所有深度 ≤ max_depth 的子目录作为候选，
-      以适配真实数据「AP 下多夹一层月份目录（1月~7月）」的结构；
+      以适配真实数据「xx 下多夹一层月份目录（1月~7月）」的结构；
     - 单个编号失败不影响其他编号；
     - 不负责判断文件夹内数据完整性；
     - 不负责查找文件夹内的具体文件（交给 template_engine）；
@@ -36,8 +36,8 @@ def _collect_candidate_dirs(target_base: str, recursive: bool, max_depth: int) -
 
     - recursive=False：仅 target_base 的直接子目录（spec 第一层行为）。
     - recursive=True ：BFS 递归收集深度 ≤ max_depth 的所有子目录。
-      例：target_base=AP，真实结构 AP/6月/R0367840+...，
-          number 文件夹相对 AP 处于第 2 层，max_depth≥2 即可命中。
+      例：target_base=AP，真实结构 xx/6月/h98765455 +...，
+          number 文件夹相对 xx 处于第 2 层，max_depth≥2 即可命中。
     """
     if not recursive:
         return [
