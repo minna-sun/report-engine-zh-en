@@ -1,6 +1,6 @@
 # 01. 顶层架构设计
 
-> **Author:** 孙敏娜 (Sun Minna)
+> **Author:** Minna
 > **Architecture Version:** v6.4
 > **Design Pattern:** 五层分离架构 / 策略驱动 / 零硬编码
 
